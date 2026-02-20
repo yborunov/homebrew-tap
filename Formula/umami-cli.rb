@@ -12,7 +12,7 @@ class UmamiCli < Formula
       -s -w
       -X github.com/yborunov/umami-cli/internal/cmd.version=#{version}
       -X github.com/yborunov/umami-cli/internal/cmd.commit=homebrew
-      -X github.com/yborunov/umami-cli/internal/cmd.date=#{time.rfc3339}
+      -X github.com/yborunov/umami-cli/internal/cmd.date=#{time.iso8601}
     ]
     system "go", "build", *std_go_args(ldflags: ldflags), "./cmd/umami"
   end
